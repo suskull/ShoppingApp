@@ -1,15 +1,9 @@
 import React from 'react';
 import './App.css';
-import HomePage from './pages/homepage';
+import HomePage from './pages/homepage/homepage';
 import Hats from './components/menu-item/Hats'
+import Shop from './pages/shop/shop'
 import {Switch, Route } from 'react-router-dom';
-
-
-const Men = () => (
-  <div>
-    <h1>hahahaha</h1>
-  </div>
-);
 
 
 function App() {
@@ -18,7 +12,7 @@ function App() {
       <Switch>
         <Route exact path = '/' component = {HomePage} />
         <Route path = '/hats' component = {Hats} />
-        <Route path = '/men' component = {Men} />
+        <Route exact path = '/shop' component = {Shop} />
       </Switch>
     </div>
   );
