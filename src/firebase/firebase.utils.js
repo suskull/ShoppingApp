@@ -1,6 +1,7 @@
 import firebase, { initializeApp } from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import { useRef } from 'react';
 
 const config = {
         apiKey: "AIzaSyCNy9bBmaZvkEbBGnKgwTsfukLBkyaJsks",
@@ -13,6 +14,38 @@ const config = {
         measurementId: "G-BZ72T103V6"
 
 };
+
+
+//create asynchronous because we are using api request
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+        if(!userAuth) return;
+
+        //create query reference document(tao. 1 dia chi?)
+        const userRef = firestore.doc(`users/${userAuth.uid}`);
+        
+        //create query snapshot with document using method .get() (present data dua. tren dia/ chi do)
+
+        const snapShot = await userRef.get();
+
+        if(!snapShot.exsits) {
+                const {displayName, email} = userAuth;
+                const createAt = new Date();
+
+                try {
+                     await userRef.set({
+                            displayName,
+                            email,
+                            createAt,
+                            ...additionalData    
+                        })
+                }catch(err) {
+                        console.log("error",err.message);
+                }
+        }
+
+        return userRef;
+
+}
 
 firebase.initializeApp(config);
 
