@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import HomePage from './pages/homepage/homepage';
-import Hats from './components/menu-item/Hats'
 import Shop from './pages/shop/shop'
 import Header from './components/header/header'
 import SignInAngSignUp from './components/signin-signup/signin-signup'
@@ -44,7 +43,7 @@ class App extends Component {
       }else{
 
       //if user log out we will setback current User to null(when we logout, userAuth will return null)
-        this.setState({currentUser:userAuth});
+        this.setState({currentUser: userAuth});
       }
     })
   }
@@ -59,13 +58,12 @@ class App extends Component {
       <Header currentUser = {this.state.currentUser} />
       <Switch>
         <Route exact path = '/' component = {HomePage} />
-        <Route path = '/hats' component = {Hats} />
         <Route exact path = '/shop' component = {Shop} />
         <Route exact path = '/signin' component = {SignInAngSignUp} />
       </Switch>
-    </div>
-  );
-    }
+     </div>
+    );
+ }
     
 
   
