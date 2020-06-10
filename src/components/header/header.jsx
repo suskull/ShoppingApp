@@ -5,6 +5,11 @@ import {Link} from 'react-router-dom';
 import {ReactComponent as Logo} from '../../assets/batman.svg';
 import {connect} from 'react-redux';
 
+import {selectCurrentUser} from '../../redux/user/user-selectors';
+import {selectCartHidden} from '../../redux/cart/cart-selectors';
+import {createStructuredSelector} from 'reselect';
+
+
 import {auth} from '../../firebase/firebase.utils';
 
 import './header.scss';
@@ -37,8 +42,18 @@ function Header({currentUser,hidden}) {
  )
 }
 
-const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => ({
-   currentUser,
-   hidden
+// const mapStateToProps = (state) => ({
+//    currentUser : selectCurrentUser(state),
+//    hidden: selectCartHidden(state)
+// })
+
+//createStructuredSelector() help us in case there are more and more prop
+
+const mapStateToProps = createStructuredSelector({
+   currentUser : selectCurrentUser,
+   hidden: selectCartHidden
 })
+
+
+
 export default connect(mapStateToProps)(Header);
