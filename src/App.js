@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import HomePage from './pages/homepage/homepage';
-import Shop from './pages/shop/shop'
-import Header from './components/header/header'
+import Shop from './pages/shop/shop';
+import Header from './components/header/header';
+import Checkout from './pages/checkout/checkout';
 import SignInAngSignUp from './components/signin-signup/signin-signup'
 import {Switch, Route, Redirect } from 'react-router-dom';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
@@ -52,7 +53,8 @@ class App extends Component {
       <Header />
       <Switch>
         <Route exact path = '/' component = {HomePage} />
-        <Route exact path = '/shop' component = {Shop} />
+        <Route path = '/shop' component = {Shop} />
+        <Route exact path = '/checkout' component = {Checkout} />
         <Route 
         exact 
         path = '/signin' 
