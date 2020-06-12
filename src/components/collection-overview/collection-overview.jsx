@@ -8,11 +8,12 @@ import {connect} from 'react-redux';
 import {selectCollectionsForPreview} from '../../redux/shop/shop-selectors';
 import {createStructuredSelector} from 'reselect';
 
-function CollectionOverview({collections}) {
+function CollectionOverview({collections,match}) {
+  console.log(collections);
     return (
         <div className='collections-overview'>
         {collections.map(({ id, ...otherCollectionProps }) => (
-          <CollectionPreview key={id} {...otherCollectionProps} />
+          <CollectionPreview key={id} {...otherCollectionProps} match={match} />
         ))}
       </div>
     )

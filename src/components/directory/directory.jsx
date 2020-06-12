@@ -7,7 +7,7 @@ import {selectDirectorySections} from '../../redux/directory/directory-selectors
 import {createStructuredSelector} from 'reselect';
 
 function Directory({sections}) {
-
+  console.log(sections);
   return(
     <div className = 'directory-menu'>
 
