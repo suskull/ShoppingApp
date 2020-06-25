@@ -18,17 +18,17 @@ function Header({currentUser,hidden}) {
  return(
      <div className ='header'>
          <Link  className ='logo-container' to='/'>
-            <Logo className ='logo'/>
+            <Logo className ='logo-container__logo'/>
          </Link>
-         <div className='options'>
-            <Link className ='option' to ='/shop'>SHOP</Link>
-            <Link className ='option' to ='/contact'>CONTACT</Link>
+         <div className='navigation'>
+            <Link className ='navigation__nav' to ='/shop'>SHOP</Link>
+            <Link className ='navigation__nav' to ='/contact'>CONTACT</Link>
 
             {currentUser ? (
-               <div className='option' onClick ={() => auth.signOut()}>
+               <div className='navigation__nav' onClick ={() => auth.signOut()}>
                 SIGN OUT
                </div>)
-               :(<Link className ='option' to ='/signin'>SIGN IN</Link>
+               :(<Link className ='navigation__nav' to ='/signin'>SIGN IN</Link>
             )}
           
 

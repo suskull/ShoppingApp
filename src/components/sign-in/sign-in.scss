@@ -1,16 +1,44 @@
 .sign-in {
-    width: 380px;
+    width: 38rem;
     display: flex;
     flex-direction: column;
-  
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__span{
+        font-size: 1.6rem;
+    }
+
+    
+
+    
+    
+    @media only screen and (max-width: 600px) {
+        margin-bottom: 3rem;
+        width: 90%;
+    }
 }
+  
+
 
 .title {
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 
 .buttons {
     text-align: center;
     display:flex;
+    //
     justify-content: space-between;
+
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+      
+
+    }
+    @media only screen and (max-width: 600px) {
+        flex-direction: row;
+    }
 }

@@ -3,7 +3,7 @@ import './contact.scss';
 
 function Contact() {
     return(
-        <div>
+        <div className = "contact">
             <h2>Contact me</h2>
             <span>Leave me a message at</span> 
             <p>xoaixanh.muoii95@gmail.com</p>

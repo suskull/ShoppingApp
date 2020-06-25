@@ -15,6 +15,7 @@ function StripeCheckoutButton ({price}) {
     return(
         <div>
             <StripeCheckout 
+                className = "stripe"
                 label = 'Pay Now'
                 name = 'Batman Clothing Ltd.'
                 billingAddress

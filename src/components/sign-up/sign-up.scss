@@ -1,8 +1,21 @@
 .sign-up {
-    width: 380px;
+    width: 38rem;
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 5rem;
+    margin-right: 3rem;
+
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__span{
+        font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin: 0;
+    }
 }
 
 .title {

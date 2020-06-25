@@ -11,11 +11,11 @@ function CollectionPreview ({ title, items, match,history,routeName}) {
   return(
     <div className='collection-preview'>
     <h1 
-    className='title'
+    className='collection-preview__title'
     onClick={() => history.push(`${match.url}/${routeName}`)}
     >{title.toUpperCase()}
     </h1>
-    <div className='preview'>
+    <div className='collection-preview__items'>
       {items
         .filter((item, index) => index < 4)
         .map((item) => (

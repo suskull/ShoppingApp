@@ -2,11 +2,19 @@
     width: 22vw;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 35rem;
     align-items: center;
     position: relative;
+
+    @media only screen and (max-width: 600px) {
+      height: 25rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+      height: 15rem;
+    }
   
-    .image {
+    &__img {
       width: 100%;
       height: 95%;
       background-size: cover;
@@ -18,7 +26,7 @@
       width: 80%;
       opacity: 0.7;
       position: absolute;
-      top : 255px;
+      top : 25.5rem;
       display : none;
     }
 
@@ -35,20 +43,36 @@
 
    
   
-    .collection-footer {
+    &__footer {
       width: 100%;
       height: 5%;
       display: flex;
       justify-content: space-between;
-      font-size: 18px;
+      font-size: 1.8rem;
   
-      .name {
+      &--name {
         width: 90%;
-        margin-bottom: 15px;
+        margin-bottom: 1.5rem;
+
+        @media only screen and (max-width: 450px) {
+          font-size: 1.2rem;
+        }
       }
   
-      .price {
+      &--price {
         width: 10%;
+
+
+        @media only screen and (max-width: 800px) {
+          width: 20%;
+        }
+
+        @media only screen and (max-width: 600px) {
+          width: 25%;
+        }
+        @media only screen and (max-width: 450px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }

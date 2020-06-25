@@ -11,21 +11,21 @@ import StripeCheckoutButton from '../../components/stripe/stripe';
 
 function Checkout({cartItems,total}) {
     return(
-        <div className = 'checkout-page'>
-            <div className = 'checkout-header'>
-                <div className = 'header-block'>
+        <div className = 'checkout'>
+            <div className = 'checkout__header'>
+                <div className = 'checkout__header--block'>
                     <spand>Product</spand>
                 </div>
-                <div className = 'header-block'>
+                <div className = 'checkout__header--block'>
                     <spand>Description</spand>
                 </div>
-                <div className = 'header-block'>
+                <div className = 'checkout__header--block'>
                     <spand>Quantity</spand>
                 </div>
-                <div className = 'header-block'>
+                <div className = 'checkout__header--block'>
                     <spand>Price</spand>
                 </div>
-                <div className = 'header-block'>
+                <div className = 'checkout__header--block'>
                     <spand>Remove</spand>
                 </div>
                 
@@ -34,7 +34,7 @@ function Checkout({cartItems,total}) {
                 {
                     cartItems.map(cartItem => <CheckoutItem key ={cartItem.id} cartItem = {cartItem}/>)
                 }
-            <div className = 'total'>TOTAL:${total}</div>
+            <div className = 'checkout__total'>TOTAL:${total}</div>
             <StripeCheckoutButton price = {total} />
         </div>
     )

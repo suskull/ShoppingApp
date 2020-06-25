@@ -1,0 +1,28 @@
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  
+}
+
+a {
+  text-decoration: none;
+  color: 'black';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  
+}
+
+html {
+  font-size: 62.5%;
+  
+  @media only screen and (max-width: 900px) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 42.5%;
+  }
+}

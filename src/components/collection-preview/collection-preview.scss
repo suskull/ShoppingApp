@@ -1,15 +1,16 @@
 .collection-preview {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin: 3rem;
+
   
-    .title {
-      font-size: 28px;
-      margin-bottom: 25px;
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
       cursor: pointer;
     }
   
-    .preview {
+    &__items {
       display: flex;
       justify-content: space-between;
     }
