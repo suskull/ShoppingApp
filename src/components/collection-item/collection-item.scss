@@ -5,13 +5,21 @@
     height: 35rem;
     align-items: center;
     position: relative;
+    margin-left: 2rem;
 
+    @media only screen and (max-width: 1200px) {
+      margin-left: 1rem;
+    }
     @media only screen and (max-width: 600px) {
       height: 25rem;
+      margin-left: .5rem;
     }
+
+    
 
     @media only screen and (max-width: 400px) {
       height: 15rem;
+      margin-left: 0;
     }
   
     &__img {
@@ -30,16 +38,16 @@
       display : none;
     }
 
-    &:hover {
-      .image{
-        opacity: 0.8;
-      }
+    &:hover  &__img{
+      opacity: 0.8;
+    } 
+     
 
-      .custom-button{
+    &:hover .custom-button{
         opacity: 0.85;
         display: flex;
       }
-    }
+    
 
    
   
